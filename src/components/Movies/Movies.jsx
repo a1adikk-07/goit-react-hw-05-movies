@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import getTreadingMovies from '../../api/api';
+import { getTreadingMovies } from '../../api/api';
 
 import styles from './movies.module.css';
 

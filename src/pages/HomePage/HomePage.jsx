@@ -1,4 +1,5 @@
 import styles from './home-page.module.css';
+import Movies from 'components/Movies/Movies';
 
 const HomePage = () => {
   return (
