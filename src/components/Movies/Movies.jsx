@@ -25,11 +25,11 @@ const Movies = () => {
     fetchPost();
   }, []);
 
-  const elements = results.map(({ id, title }) => {
+  const elements = results.map(({ id, title }) => (
     <li key={id}>
       <Link to={`/movies/${id}`}>{title}</Link>
-    </li>;
-  });
+    </li>
+  ));
   return (
     <>
       {error && <p className={styles.error}>{error}</p>}
