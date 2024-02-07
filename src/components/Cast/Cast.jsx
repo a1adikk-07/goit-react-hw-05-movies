@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getMovieCastById } from 'api/api';
+import { getMovieCastById } from 'api/movie';
 
 import style from './cast.module.css';
 

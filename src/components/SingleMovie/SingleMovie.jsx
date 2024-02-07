@@ -6,7 +6,7 @@ import {
   NavLink,
   Outlet,
 } from 'react-router-dom';
-import { GetMovieById } from 'api/api';
+import { GetMovieById } from 'api/movie';
 import style from './search-movie.module.css';
 
 const SingleMovie = () => {

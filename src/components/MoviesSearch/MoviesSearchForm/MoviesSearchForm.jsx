@@ -14,7 +14,7 @@ const MoviesSearchForm = ({ onSubmit }) => {
   }, []);
 
   const handleChange = ({ target }) => {
-    const [name, value] = target;
+    const { name, value } = target;
     setState({
       ...state,
       [name]: value,
