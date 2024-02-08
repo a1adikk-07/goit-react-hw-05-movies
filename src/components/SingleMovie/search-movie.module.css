@@ -1,0 +1,36 @@
+.button {
+  margin: 5px;
+}
+
+.mainInfo {
+  padding-left: 15px;
+  padding-right: 370px;
+  display: flex;
+  padding-bottom: 15px;
+  border-bottom: solid lightgray;
+  margin-bottom: 0;
+}
+
+.imgBlock {
+  display: flex;
+  justify-content: left;
+}
+
+.img {
+  width: 380px;
+}
+.textBlock {
+  font-size: 25px;
+  display: block;
+  margin-left: 30px;
+}
+
+.mainTitle {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.secondTitle {
+  font-size: 28px;
+  font-weight: bold;
+}

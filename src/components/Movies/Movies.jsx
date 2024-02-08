@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { getTreadingMovies } from '../../api/movie';
+import { getTrendingMovies } from '../../api/movie';
 
 import styles from './movies.module.css';
 
@@ -13,7 +13,7 @@ const Movies = () => {
     const fetchPost = async () => {
       try {
         setLoading(true);
-        const { data } = await getTreadingMovies();
+        const { data } = await getTrendingMovies();
         setResults(data.results?.length ? data.results : []);
       } catch (error) {
         setError(error.message);
@@ -26,7 +26,7 @@ const Movies = () => {
   }, []);
 
   const elements = results.map(({ id, title }) => (
-    <li key={id}>
+    <li key={id} className={styles.movie}>
       <Link to={`/movies/${id}`}>{title}</Link>
     </li>
   ));

@@ -26,6 +26,7 @@ const Reviews = () => {
     };
     fetchMovie();
   }, [id]);
+
   return (
     <div className={style.reviewsContainer}>
       {loading && <p>...Loading</p>}

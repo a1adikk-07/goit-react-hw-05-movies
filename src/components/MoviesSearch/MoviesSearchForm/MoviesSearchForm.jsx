@@ -47,9 +47,12 @@ const MoviesSearchForm = ({ onSubmit }) => {
           type="text"
           name="search"
           placeholder="Enter search movies"
+          className={styles.input}
         />
       </div>
-      <button type="submit">Search</button>
+      <button type="submit" className={styles.searchbtn}>
+        🔎
+      </button>
     </form>
   );
 };

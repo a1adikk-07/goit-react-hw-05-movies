@@ -1,9 +1,11 @@
 import Cast from 'components/Cast/Cast';
 
 const CastPage = () => {
-  <div>
-    <Cast />
-  </div>;
+  return (
+    <div>
+      <Cast />
+    </div>
+  );
 };
 
 export default CastPage;

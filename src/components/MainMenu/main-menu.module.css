@@ -1,18 +1,19 @@
 .menu {
   list-style: none;
   display: flex;
-  padding-bottom: 15px;
+  padding-bottom: 18px;
   border-bottom: solid lightgray;
   margin-bottom: 0;
 }
 .link {
-  padding: 10px 15px;
+  padding: 9px 15px;
   text-decoration: none;
   color: #000;
-  font-size: 18px;
+  font-size: 28px;
   font-weight: bold;
 }
 
 .link:global(.active) {
-  color: red;
+  color: dimgray;
+  border-bottom: 4px solid dimgray;
 }

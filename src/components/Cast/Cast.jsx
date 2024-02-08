@@ -13,8 +13,7 @@ const Cast = () => {
 
   useEffect(() => {
     if (!id) return;
-
-    const fetchMovies = async () => {
+    const fetchMovie = async () => {
       try {
         setLoading(true);
         const { data } = await getMovieCastById(id);
@@ -25,13 +24,13 @@ const Cast = () => {
         setLoading(false);
       }
     };
-    fetchMovies();
+    fetchMovie();
   }, [id]);
 
   return (
-    <div>
-      {loading && <p>...loading</p>}
-      {error && <p>error: {error}</p>}
+    <div className={style.castContainer}>
+      {loading && <p>Loading</p>}
+      {error && <p>Error: {error}</p>}
       {cast &&
         cast.map((hero, index) => (
           <div key={index} className={style.actorContainer}>
