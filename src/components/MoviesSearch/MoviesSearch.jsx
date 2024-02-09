@@ -42,7 +42,7 @@ const MoviesSearch = () => {
     <>
       <MoviesSearchForm onSubmit={handleSearch} />
       {error && <p className={styles.error}>{error}</p>}
-      {loading && <p>...Loading</p>}
+      {loading && <p>Loading...</p>}
       {isMovies && <MoviesSearchList items={movies} />}
     </>
   );

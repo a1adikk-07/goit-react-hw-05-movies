@@ -29,7 +29,7 @@ const Cast = () => {
 
   return (
     <div className={style.castContainer}>
-      {loading && <p>Loading</p>}
+      {loading && <p>Loading...</p>}
       {error && <p>Error: {error}</p>}
       {cast &&
         cast.map((hero, index) => (

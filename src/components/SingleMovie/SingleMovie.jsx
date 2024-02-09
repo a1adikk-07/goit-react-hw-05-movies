@@ -43,7 +43,7 @@ const SingleMovie = () => {
 
   return (
     <div>
-      {loading && <p>...Loading</p>}
+      {loading && <p>Loading...</p>}
       {error && <p>Error: {error}</p>}
       <button className={style.button} onClick={goBack} type="button">
         {'\u2190'} Go back
