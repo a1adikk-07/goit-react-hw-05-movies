@@ -15,10 +15,6 @@
   flex-direction: column;
 }
 
-.actorInfo {
-  border: 3px solid red;
-}
-
 .actorImage {
   width: 280px;
   /* height: 160px; */
