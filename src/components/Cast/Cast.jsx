@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { getMovieCastById } from 'api/movie';
 
 import style from './cast.module.css';
+import defaultImage from '../../images/defaultimg.png';
 
 const Cast = () => {
   const [cast, setCast] = useState([]);
@@ -27,6 +28,10 @@ const Cast = () => {
     fetchMovie();
   }, [id]);
 
+  const handleImageError = event => {
+    event.target.src = defaultImage;
+  };
+
   return (
     <div className={style.castContainer}>
       {loading && <p>Loading...</p>}
@@ -38,6 +43,7 @@ const Cast = () => {
               src={`https://image.tmdb.org/t/p/original/${hero.profile_path}`}
               alt={hero.name}
               className={style.actorImage}
+              onError={handleImageError}
             />
             <li className={style.actorInfo}>
               <p className={style.actorName}>{hero.name}</p>

@@ -10,7 +10,7 @@ import { GetMovieById } from 'api/movie';
 import style from './search-movie.module.css';
 
 const SingleMovie = () => {
-  const [movie, setMovies] = useState();
+  const [movie, setMovies] = useState(null);
   const [year, setYear] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -39,6 +39,10 @@ const SingleMovie = () => {
     fetchMovies();
   }, [id]);
 
+  const handleImageError = event => {
+    event.target.src = '/src/images/Screenshot_1.png';
+  };
+
   const goBack = () => navigate(from);
 
   return (
@@ -56,6 +60,7 @@ const SingleMovie = () => {
                 src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
                 alt={movie.title}
                 className={style.img}
+                onError={handleImageError}
               />
             </div>
             <div className={style.textBlock}>
