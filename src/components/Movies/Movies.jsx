@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { getTrendingMovies } from '../../api/movie';
+import MoviesSearchList from 'components/MoviesSearch/MoviesSearchList/MoviesSearchList';
 
 import styles from './movies.module.css';
 
@@ -34,7 +35,7 @@ const Movies = () => {
     <>
       {error && <p className={styles.error}>{error}</p>}
       {loading && <p>loading...</p>}
-      {Boolean(elements.length) && <ul className={styles.list}>{elements}</ul>}
+      {elements && <MoviesSearchList items={results} />}
     </>
   );
 };
